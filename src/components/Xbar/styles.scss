@@ -12,10 +12,10 @@
 }
 
 .group {
-  margin: 0 10px;
+  margin: 0 $xbar-group-spacing;
   position: relative;
   height: $xbar-group-height;
-  width: $xbar-group-width * 2;
+  width: $xbar-group-width;
 }
 
 $scale: 1.66;
@@ -27,16 +27,16 @@ $scale: 1.66;
   width: $xbar-group-width * 5 + 32px;
   padding: 16px;
   margin: 16px auto;
-  .group:nth-child(2) {
-    margin-right: $slot-spacing * 6;
-    &:after {
-      content: "";
-      display: block;
-      height: 100%;
-      position: absolute;
-      right: -$slot-spacing * 4;
-      border-right: 1px solid rgba(255, 255, 255, 0.33);
-    }
+  &:after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    left: 50%;
+    top: $slot-size;
+    bottom: $slot-size;
+    // right: -$slot-spacing * 4;
+    border-right: 1px solid rgba(255, 255, 255, 0.33);
   }
 }
 
